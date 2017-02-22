@@ -1,0 +1,380 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+p {
+  color: #636363;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.welcome {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("immagini/Battaglia.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /*display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;*/
+  color: #ffffff;
+  box-shadow: 0 0 50px black inset;
+  z-index: 1001;
+}
+
+.welcome h1 {
+  font-size: 50px;
+  font-family: 'Eagle Lake', cursive;
+  text-shadow: 2px 2px 2px black;
+}
+
+.enter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.loaded .enter .welcome {
+  transform: translateY(-100%);
+  transition: 0.8s ease-out;
+}
+
+.loaded .enter {
+  visibility: hidden;
+}
+
+.welcome img {
+  height: 15%;
+  box-shadow: 2px 2px 4px black;
+  border-radius: 50%;
+}
+
+.block {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+/*************************navbar***************************/
+.site {
+  height: 100%;
+}
+
+.navbar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /*border-bottom: 1px solid black;*/
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 3px 5px black;
+  z-index: 1;
+}
+
+.navbar h3 {
+  font-family: 'Eagle Lake', cursive;
+  /*background-color: red;*/
+  margin-left: 4%;
+}
+
+.navbar img {
+  height: 50%;
+  width: 12%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.presentnav {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #000000;
+  text-shadow: 1px 1px 2px black;
+  /*background-color: green;*/
+}
+
+.menunav {
+  width: 50%;
+  font-family: 'Eagle Lake', cursive;
+}
+
+.menunavul {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menunavul li a {
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  display: inline-block;
+}
+
+a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.menunavul li a:hover:after {
+  width: 100%;
+	background: #cc0000;
+}
+
+/******************slider******************/
+.fill {
+  height: 10%;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url("immagini/Vaccinazione2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  z-index: -3000;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layer h1, .layer h3 {
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Lato', sans-serif;
+}
+
+.layer h1 {
+  font-size: 70px;
+}
+
+.layer h3 {
+  font-size: 40px;
+}
+
+/***************paragraph*****************/
+
+.paragraph {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /*box-shadow: 0 -3px 5px black;*/
+}
+
+.casella {
+  width: 10%;
+  padding: 5%;
+  margin-left: 2%;
+}
+
+.casella h2 {
+  margin: 0;
+  display: inline;
+  font-family: sans-serif;
+  font-size: 40px;
+  border-bottom: 4px solid #cc0000;
+}
+
+.introduce {
+  padding: 20%;
+  font-size: 30px;
+  text-align: center;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #636363;
+}
+
+.quote {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/****************ssc*********************/
+.ssc {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ssc p {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+/****************article****************/
+
+.article {
+  white-space: nowrap;
+  height: 200px;
+  width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 8px black;
+}
+
+/******************tiles*********************/
+
+.tiles {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.caption {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+.caption__media {
+    display: block;
+    width: 400px;
+    height: 300px;
+}
+
+.caption__overlay {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    transform: translateY(100%);
+    transition: transform .35s ease-out;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption__overlay h1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.caption__overlay h1 a:hover {
+  color: #c5c5c5;
+}
+
+.caption:hover .caption__overlay {
+    transform: translateY(0);
+}
+
+.caption::before {
+    content: ' ';
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+
+.caption:hover::before {
+    background: rgba(0, 0, 0, .8);
+}
+
+/*************************footer****************************/
+
+footer {
+  height: 50%;
+  background-color: blue;
+}
+
+footer h3 {
+  font-family: 'Eagle Lake', cursive;
+}
+
+/************************chi siamo******************************/
+
+.presentazione {
+  height: 100%;
+}
+
+.first {
+  margin-top: 20px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.foto {
+  height: 150px;
+  width: 150px;
+  background: url("immagini/SpegisRidotto.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.bio {
+  height: 150px;
+  width: 70%;
+}
+
+/*****
+voci di menu: Sezione del bollettino
+Sezione eventi
+Sezione Contatti
+Sezione lettura per i soci pubbl complete solo estratto per non soci
+Sezione sede
+Sezione vita associativa
+Sezione pubblicazioni ed eventi
+Sezione segnalazione pubblicazioni esterne e link
+Sezione letture consigliate
+****/
